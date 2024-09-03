@@ -13,15 +13,19 @@ let b2: boolean = false;
 let n: null = null;
 let un: undefined = undefined;
 
-let v1: void = null;        // 可以修改tsconfig.json里的strict的值
+// let v1: void = null;        // 可以修改tsconfig.json里的strict的值
 let v2: void = undefined;
 
 let a: undefined = undefined;
 let n2: null = null;
-n2 = a;
-a = n2;
+// n2 = a;
+// a = n2;
 
 
+// 可以给放法定义返回值
+function myFn ():number {
+    return 123;
+}
 
 // =====================================================
 
