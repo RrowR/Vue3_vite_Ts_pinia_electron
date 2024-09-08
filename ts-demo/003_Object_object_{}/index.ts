@@ -25,4 +25,6 @@ namespace module_003_Object_object_对象类型_003 {
     let b: {} = { age: 1 }
     console.log(b.age);     // 无法访问
     b.age = 2;      // 无法赋值
+
+
 }
