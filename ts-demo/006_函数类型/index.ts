@@ -25,6 +25,32 @@ namespace module_001_函数类型_定义函数的参数和返回值类型 {
     }
     console.log(getUser({ name: "猫羽雫", age: 16 }));
 
+    // 4.定义函数this类型
+    interface Obj {
+        name:number[],
+        add:(this:Obj,num:number) => void
+    }
+    // ts中可以定义函数this的类型,在js中无法使用 必须是第一个参数定义this的类型
+    let obj:Obj = {
+        name:[1,2,3],
+        add(this:Obj,num:number){       // 指定第一个参数this的类型为Obj对象
+            this.name.push(num)         // 这和this就可以调用自身的name属性(这里不定义也没有关系，只是没有代码提示而已)
+        }
+    }
+    obj.add(4)
+    console.log(obj);
+
+    // 5.函数重载 (和Java几乎一样)
+    let users:number[] = [1,2,3]
+    function reload(id:number){
+        
+    }
+
+    
+
+    
+    
+
     
 
 }
